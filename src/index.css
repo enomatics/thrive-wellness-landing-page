@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-mint-bg: #effbf8;
+  --color-thrive-light: #72eabb;
+  --color-thrive-main: #00b67a;
+  --color-thrive-main-var: #18bc87;
+  --color-thrive-dark: #0e202a;
+  --color-thrive-grey: #66857b;
+
+  --font-mollen: "Mollen", "sans-serif";
+}
+
+@font-face {
+  font-family: Mollen;
+  src: url("/fonts/Mollen\ Personal\ Use-Light.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mollen";
+  src: url("/fonts/Mollen\ Personal\ Use-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mollen";
+  src: url("/fonts/Mollen\ Personal\ Use-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer utilities {
+  .container {
+    @apply flex flex-col justify-center gap-8;
+  }
+
+  .gradient-main-to-var-text {
+    @apply from-thrive-main to-thrive-main-var bg-gradient-to-r bg-clip-text text-transparent;
+  }
+
+  .section {
+    @apply max-w-[1024px] p-10;
+  }
+
+  .wide-section {
+    @apply max-w-[1280px] p-10;
+  }
+
+  .h1 {
+    @apply text-thrive-dark text-7xl font-bold;
+  }
+
+  .h2 {
+    @apply text-start text-5xl font-bold;
+  }
+
+  .ul {
+    @apply flex flex-col items-start gap-4;
+  }
+
+  .bold-p {
+    @apply text-thrive-grey text-2xl font-bold;
+  }
+
+  .input {
+    @apply focus:ring-thrive-main border-thrive-grey rounded-full border px-10 py-5 focus:border-none focus:ring-2 focus:outline-none;
+  }
+}
