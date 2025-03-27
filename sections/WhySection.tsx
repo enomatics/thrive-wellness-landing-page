@@ -4,7 +4,7 @@ const WhySection = () => {
       <h2 className="h2">Why Small Habits Matter for Diabetes Management</h2>
       <p className="bold-p">Did you know?</p>
       {/* <div className="bg-thrive-grey rounded-2xl p-4 px-8"> */}
-      <p className="gradient-main-to-var-text text-4xl font-black">
+      <p className="gradient-main-to-var-text quote text-4xl font-black">
         "Studies show that small, consistent lifestyle changes are more
         effective than extreme diets or short-term fixes."
       </p>

@@ -2,7 +2,7 @@ import { LuCircleCheckBig } from "react-icons/lu";
 
 const ListItem = ({ children }: { children: React.ReactNode }) => {
   return (
-    <li className="flex items-start justify-center gap-3">
+    <li className="li">
       <span className="h-full">
         <LuCircleCheckBig />
       </span>

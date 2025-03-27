@@ -10,7 +10,7 @@ const WhoSection = () => {
 
   return (
     <section className="section container">
-      <h2 className="text-5xl font-bold">Who Is This Guide For?</h2>
+      <h2 className="h2">Who Is This Guide For?</h2>
       <p className="bold-p">This guide is perfect for:</p>
       <ul className="ul">
         {perfectFor.map((item, index) => (

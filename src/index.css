@@ -37,38 +37,111 @@
 
 @layer utilities {
   .container {
-    @apply flex flex-col justify-center gap-8;
+    @apply flex flex-col justify-center gap-4 md:gap-8;
+  }
+
+  .section {
+    @apply max-w-[1024px] p-5 md:p-10;
+  }
+
+  .wide-section {
+    @apply max-w-[1280px];
   }
 
   .gradient-main-to-var-text {
     @apply from-thrive-main to-thrive-main-var bg-gradient-to-r bg-clip-text text-transparent;
   }
 
-  .section {
-    @apply max-w-[1024px] p-10;
-  }
-
-  .wide-section {
-    @apply max-w-[1280px] p-10;
-  }
-
   .h1 {
-    @apply text-thrive-dark text-7xl font-bold;
+    @apply text-thrive-dark text-3xl font-bold md:text-5xl lg:text-7xl;
+  }
+
+  .subtitle {
+    @apply text-thrive-main-var text-lg md:text-2xl;
   }
 
   .h2 {
-    @apply text-start text-5xl font-bold;
+    @apply text-start text-xl font-bold md:text-3xl lg:text-5xl;
   }
 
   .ul {
     @apply flex flex-col items-start gap-4;
   }
 
+  .li {
+    @apply flex items-start justify-center gap-3 text-sm lg:text-xl;
+  }
+
+  .p {
+    @apply text-sm lg:text-xl;
+  }
+
   .bold-p {
-    @apply text-thrive-grey text-2xl font-bold;
+    @apply text-thrive-grey text-sm font-bold md:text-xl lg:text-2xl;
+  }
+
+  .quote {
+    @apply text-center text-xl font-bold md:text-3xl;
   }
 
   .input {
-    @apply focus:ring-thrive-main border-thrive-grey rounded-full border px-10 py-5 focus:border-none focus:ring-2 focus:outline-none;
+    @apply focus:ring-thrive-main border-thrive-grey rounded-full border px-10 py-5 font-bold focus:border-none focus:ring-2 focus:outline-none;
   }
+
+  .btn {
+    @apply px-5 py-3 text-sm md:px-10 md:py-5 lg:text-xl;
+  }
+}
+
+.btn {
+  position: relative;
+  font-weight: 700;
+  color: white;
+  border-radius: 9999px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    90deg,
+    var(--color-thrive-main) 0%,
+    var(--color-thrive-main-var) 100%
+  );
+  border-radius: 9999px;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  opacity: 0;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    90deg,
+    var(--color-thrive-dark) 0%,
+    var(--color-thrive-main) 100%
+  );
+  border-radius: 9999px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  opacity: 1;
 }

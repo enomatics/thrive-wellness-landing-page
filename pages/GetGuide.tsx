@@ -22,7 +22,7 @@ const GetGuide = () => {
           <span className="text-thrive-main">free guide.</span>
         </p>
 
-        <form className="flex flex-col gap-10">
+        <form className="flex flex-col gap-5">
           <input
             type="text"
             placeholder="Your name"

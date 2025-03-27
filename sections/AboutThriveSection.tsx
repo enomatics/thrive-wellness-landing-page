@@ -2,7 +2,7 @@ const AboutThriveSection = () => {
   return (
     <section className="section container">
       <h2 className="h2">About Thrive Wellness Clinic LTD</h2>
-      <p className="text-2xl">
+      <p className="text-sm md:text-2xl">
         At Thrive Wellness Clinic LTD, we are dedicated to helping individuals
         live healthier, happier lives. Our team of experts provides personalized
         guidance and resources to support your wellness journey, and help you{" "}

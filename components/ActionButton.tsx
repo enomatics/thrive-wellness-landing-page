@@ -11,7 +11,7 @@ const ActionButton = () => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={() => navigate("/get-guide")}
-      className="bg-thrive-main hover:bg-thrive-light hover:text-thrive-dark flex cursor-pointer items-center rounded-full px-4 py-2 font-medium text-white transition-all duration-300"
+      className="btn flex items-center justify-center"
     >
       <span>Get the Free Guide</span>
       {!hovered ? (

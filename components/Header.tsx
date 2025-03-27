@@ -1,4 +1,4 @@
-import ActionButton from "./ActionButton";
+// import ActionButton from "./ActionButton";
 
 const Header = () => {
   return (
@@ -7,7 +7,7 @@ const Header = () => {
         <img src="/imgs/thrive-logo.webp" alt="Thrive logo" />
       </div>
 
-      <ActionButton />
+      {/* <ActionButton /> */}
     </header>
   );
 };
