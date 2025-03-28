@@ -7,22 +7,23 @@ const GetGuide = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="section mx-auto mt-20 flex h-[85dvh] items-center justify-center gap-10">
-      <div className="container h-full">
+    <section className="section mx-auto my-30 flex h-full flex-col items-center justify-center gap-10 md:my-0 md:mt-20 md:flex-row">
+      <div className="hidden md:container md:flex">
         <img
           src="/imgs/thrive-wellness-book.png"
           alt="Diabetes Guide"
           //   height={500}
         />
       </div>
-      <div className="container">
+
+      <div className="container items-center justify-center">
         <h2 className="h2">Habit Guide and Builder for Diabetes Program</h2>
         <p className="bold-p">
           Please fill out the form below to receive your{" "}
           <span className="text-thrive-main">free guide.</span>
         </p>
 
-        <form className="flex flex-col gap-5">
+        <form className="flex w-full flex-col gap-5">
           <input
             type="text"
             placeholder="Your name"
